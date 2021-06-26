@@ -45,11 +45,6 @@ function sigIn(username, password) {
   } else {
     alert('Sorry, username and password do not match');
   }
-  // if (user === database[0].username && pass === database[0].password) {
-  //   console.log(newsFeed);
-  // } else {
-  //   alert('Sorry, username and password do not match');
-  // }
 }
 
 console.log(sigIn(userNamePrompt, passwordPrompt));
