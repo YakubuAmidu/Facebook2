@@ -1,0 +1,11 @@
+{
+  "name": "advance-javascript",
+  "version": "1.0.0",
+  "description": "advance javascript",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon index.html"
+  },
+  "author": "Yakubu",
+  "license": "ISC"
+}
