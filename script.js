@@ -3,6 +3,14 @@ var database = [
     username: 'yakubu',
     password: 'supersecret',
   },
+  {
+    username: 'Sally',
+    password: '123',
+  },
+  {
+    username: 'Ingrid',
+    password: '777',
+  },
 ];
 
 var newsFeed = [
@@ -19,12 +27,29 @@ var newsFeed = [
 var userNamePrompt = prompt("What's is your username ?");
 var passwordPrompt = prompt("What's is your passord ?");
 
-function sigIn(user, pass) {
-  if (user === database[0].username && pass === database[0].password) {
+function isUserValid(username, password) {
+  for (var i = 0; i < database.length; i++) {
+    if (
+      database[i].username === username &&
+      database[i].password === password
+    ) {
+      return true;
+    }
+  }
+  return false;
+}
+
+function sigIn(username, password) {
+  if (isUserValid(username, password)) {
     console.log(newsFeed);
   } else {
     alert('Sorry, username and password do not match');
   }
+  // if (user === database[0].username && pass === database[0].password) {
+  //   console.log(newsFeed);
+  // } else {
+  //   alert('Sorry, username and password do not match');
+  // }
 }
 
 console.log(sigIn(userNamePrompt, passwordPrompt));
